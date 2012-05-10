@@ -1,0 +1,414 @@
+@import "compass/css3/text-shadow";
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/css3/images";
+@import "compass/typography/text/replacement";
+
+// Branco.
+$white:                       rgba(255, 255, 255, 1) !default;
+
+// Preto.
+$black:                       rgba(  0,   0,   0, 1) !default;
+
+// Azuis.
+$blue1:                       rgba(219, 239, 247, 1) !default;
+$blue2:                       rgba(115, 195, 230, 1) !default;
+$blue3:                       rgba( 77, 173, 214, 1) !default;
+$blue4:                       rgba( 21, 138, 196, 1) !default;
+
+// Verdes.
+$green1:                      rgba(225, 241, 225, 1) !default;
+$green2:                      rgba(171, 227, 133, 1) !default;
+$green3:                      rgba( 95, 192, 128, 1) !default;
+$green4:                      rgba( 97, 160, 128, 1) !default;
+
+// Vermelhos.
+$red1:                        rgba(255, 220, 220, 1) !default;
+$red2:                        rgba(255, 109, 109, 1) !default;
+$red3:                        rgba(232,  59,  59, 1) !default;
+$red4:                        rgba(225,  39,  45, 1) !default;
+$red5:                        rgba(193,  39,  45, 1) !default;
+
+// Laranjas.
+$orange1:                     rgba(255, 238, 215, 1) !default;
+$orange2:                     rgba(255, 200,   0, 1) !default;
+$orange3:                     rgba(255, 169,  53, 1) !default;
+$orange4:                     rgba(255, 124,  53, 1) !default;
+$orange5:                     rgba(243,  94,   0, 1) !default;
+$orange6:                     rgba(243,  74,   0, 1) !default;
+
+// Cinzas.
+$gray1:                       rgba(247, 247, 247, 1) !default;
+$gray2:                       rgba(240, 240, 240, 1) !default;
+$gray3:                       rgba(230, 230, 230, 1) !default;
+$gray4:                       rgba(204, 204, 204, 1) !default;
+$gray5:                       rgba(179, 179, 179, 1) !default;
+$gray6:                       rgba(109, 110, 111, 1) !default;
+
+body {
+  text-align: center;
+  font-family: heveltica, arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+
+  .textshadow & {
+    @include single-text-shadow($white, 0, 1px, 1px);
+  }
+}
+
+a, a:visited {
+  color: $blue3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $blue4;
+  text-decoration: underline;
+}
+
+a:active {
+  color: $blue2;
+}
+
+.container {
+  @include clearfix;
+  text-align: left;
+  width: 960px;
+  margin: 0 auto;
+
+  background: url("../img/redutech-graph.png") no-repeat -40px 200px;
+}
+
+.header {
+
+  .logotipo {
+    overflow: hidden;
+    text-indent: -99999px;
+    background: url("../img/redutech-topo.png") no-repeat;
+    width: 490px;
+    height: 147px;
+    float: left;
+    margin: 0;
+    margin-bottom: 13px;
+  }
+
+  .nav {
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    width: 380px;
+    float: right;
+    line-height: 14px;
+    margin-top: 75px;
+
+    li {
+      padding: 0 10px;
+      float: left;
+      border-right: 1px solid $gray4;
+    }
+
+    li:first-child { padding-left: 0; }
+    li:last-child { padding-right: 0; border: none; }
+  }
+
+}
+
+.call-wrapper {
+  text-align: left;
+  clear: both;
+  height: 300px;
+  width: 1240px;
+  margin: 0 auto;
+  background-color: $green3;
+
+  .hack {
+    background: url("../img/call-green-bkg.png") no-repeat 0 ;
+    width: 2000px;
+    height: 300px;
+    margin-left: -2000px;
+    float: left;
+  }
+
+  .multiplebgs & {
+    background-image: url("../img/redutech-graph.png"), url("../img/bkg-green-1.png"), url("../img/bkg-green-2.png"), url("../img/bkg-green-3.png");
+    background-position: 0 60px, 0 0, 970px 0, 1020px 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  .call {
+    @include clearfix;
+    margin: 0 auto;
+    width: 960 - 140px;
+    height: 300px;
+    padding-left: 140px;
+  }
+
+  .header-call {
+    .textshadow & {
+      @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px);
+    }
+
+    padding: 0;
+    margin: 0;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 580px;
+    line-height: 50px;
+    font-size: 48px;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    color: $white;
+  }
+
+  p {
+    .textshadow & {
+      @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px);
+    }
+
+    margin: 0;
+    padding: 0;
+    clear: both;
+    width: 700px;
+    color: white;
+    font-size: 14px;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    float: left;
+  }
+}
+
+.main {
+  clear: both;
+
+  h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    line-height: 48px;
+    font-size: 48px;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+  p {
+    font-size: 14px;
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: $gray6;
+    padding: 5px 0;
+    margin: 0;
+  }
+
+  img {
+    .borderradius & { @include border-radius; }
+    .boxshadow & {
+      @include single-box-shadow($gray4, 1px, 0, 2px, 2px);
+    }
+    border: 1px solid white;
+  }
+
+  section {
+    @include clearfix;
+    clear: both;
+    padding: 5px 0;
+    padding-left: 130px;
+    width: 760px;
+  }
+
+  .explain-mission {
+    clear: both;
+  }
+
+  blockquote {
+    &:before, &:after {
+      content: " ";
+      width: 30px;
+      height: 25px;
+      display: block;
+    }
+
+    &:before {
+      margin-left: -30px;
+      margin-top: -2px;
+      float: left;
+      background: url("../img/quote-1.png") no-repeat;
+    }
+
+    &:after {
+      margin-right: -40px;
+      margin-top: -40px;
+      float: right;
+      background: url("../img/quote-2.png") no-repeat;
+    }
+
+    width: 700px;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  address {
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    width: 340px;
+    height: 70px;
+    float: left;
+    margin-right: 25px;
+  }
+
+  .product-img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .product-links {
+    @include clearfix;
+
+    list-style: none;
+    line-height: 14px;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+
+
+    li {
+      padding: 0 10px;
+      float: left;
+      border-right: 1px solid $gray4;
+    }
+
+    li:first-child { padding-left: 0; }
+    li:last-child { padding-right: 0; border: none; }
+  }
+
+  .team {
+    list-style: none;
+    margin: 0 10px 0 10px;
+    padding: 0;
+
+    li {
+      margin: 10px 20px 10px 0;
+      float: left;
+      color: $gray6;
+      font-family: "museo-sans",sans-serif;
+      font-style: normal;
+    }
+
+    h5 {
+      font-size:18px;
+      font-weight: 100;
+      margin: 0;
+      margin-top: 10px;
+
+      .ln {
+        display: block;
+        color: $gray6;
+        font-weight: 300;
+      }
+    }
+
+    a {
+      font-weight: 500;
+    }
+
+    a:hover, a:hover * {
+      font-weight: 500;
+      text-decoration: none;
+      color: $blue4;
+    }
+
+    strong {
+      font-weight: 100;
+    }
+  }
+
+  .office {
+    margin-right: 15px;
+    margin-bottom: 20px
+  }
+
+}
+
+.footer {
+  @include clearfix;
+  text-align: left;
+  padding-bottom: 70px;
+  height: 140px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-top: 1px solid white;
+
+  .cssgradients & {
+    @include background-image(linear-gradient($gray5, $gray1));
+  }
+
+  .footer-content {
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  .footer-logotipo {
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url("../img/redutech-footer.png") no-repeat;
+    width: 240px;
+    height: 77px;
+    margin: 0;
+    padding: 0;
+    float: left;
+  }
+
+  .about-us, address, strong {
+    .textshadow & {
+      @include single-text-shadow($white, 0, 1px, 1px);
+    }
+    font-size: 11px;
+    color: $gray6;
+  }
+
+  .about-us {
+    width: 290px;
+    float: left;
+    margin: 0;
+    padding: 0;
+    margin-right: 120px;
+    margin-left: 15px;
+    clear: left;
+  }
+
+  address {
+    float: left;
+    width: 160px;
+    height: 56px;
+    margin-right: 60px;
+    text-align: center;
+    background: url("../img/geoloc-icon.png") no-repeat center center;
+    height: 75px;
+    padding-top: 55px;
+    margin-top: -40px;
+  }
+
+  .redu-nav, .redu-tech-nav {
+    width: 170px;
+    float: left;
+    font-size: 11px;
+    margin-top: -20px;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      margin-left: 10px;
+      padding: 0;
+    }
+  }
+
+  .redu-tech-nav { width: 140px; }
+}
