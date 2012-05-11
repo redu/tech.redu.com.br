@@ -71,6 +71,11 @@ a:active {
   color: $blue2;
 }
 
+::selection {
+  background: $blue3;
+  color: white;
+}
+
 .container {
   @include clearfix;
   text-align: left;
