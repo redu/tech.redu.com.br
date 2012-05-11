@@ -99,11 +99,12 @@ a:active {
   }
 
   .nav {
+
     font-family: "museo-sans",sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
-    width: 380px;
+    width: 395px;
     float: right;
     line-height: 14px;
     margin-top: 75px;
@@ -350,6 +351,7 @@ a:active {
   margin: 0 auto;
   margin-top: 60px;
   border-top: 1px solid white;
+  background: $gray5;
 
   .cssgradients & {
     @include background-image(linear-gradient($gray5, $gray1));
