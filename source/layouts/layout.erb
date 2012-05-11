@@ -32,6 +32,7 @@
   <%= javascript_include_tag 'libs/modernizr-2.0.6.min' %>
   <%= javascript_include_tag 'http://use.typekit.com/lpo4rgu.js' %>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <%= favicon_tag 'favicon.ico' %>
 </head>
 
 <body>
@@ -39,7 +40,7 @@
   <%= yield_content :content %>
   <footer class="footer">
   <div class="footer-content">
-    <h1 class="footer-logotipo"> <a href="#">Redu Educational Technologies</a> </h1>
+    <h1 class="footer-logotipo"> <a href="http://tech.redu.com.br">Redu Educational Technologies</a> </h1>
     <p class="about-us">Somos uma startup brasileira, recifense e estamos embarcados no Porto Digital. Nossa equipe é composta por pessoas dedicadas e comprometidas com um objetivo em comum: desenvolver produtos que façam a diferença para uma educação mais acessível e universal.</p>
     <address>
       Rua do Apolo, 181<br>
@@ -49,17 +50,17 @@
     <div class="redu-nav">
       <strong>Redu</strong>
       <ul>
-      <li> <a href="">Redu</a> </li>
-      <li> <a href="">Blog do Redu</a> </li>
+      <li> <a href="http://www.redu.com.br">Redu</a> </li>
+      <li> <a href="http://blog.redu.com.br">Blog do Redu</a> </li>
       </ul>
     </div>
     <div class="redu-tech-nav">
       <strong>Redutech</strong>
       <ul>
-      <li> <a href="">Nossa missão</a> </li>
-      <li> <a href="">Nosso produto</a> </li>
-      <li> <a href="">Equipe</a> </li>
-      <li> <a href="">Encontre-nos</a> </li>
+      <li> <a href="#mission">Nossa missão</a> </li>
+      <li> <a href="#product">Nosso produto</a> </li>
+      <li> <a href="#team">Equipe</a> </li>
+      <li> <a href="#contact-us">Encontre-nos</a> </li>
       </ul>
     </div>
   </div>
@@ -71,13 +72,7 @@
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
-
-  <!-- scripts concatenated and minified via build script -->
-  <script defer src="js/plugins.js"></script>
   <script defer src="js/script.js"></script>
-  <!-- end scripts -->
-
 
   <!-- Change UA-XXXXX-X to be your site's ID -->
   <script>

@@ -91,6 +91,11 @@ a:active {
     float: left;
     margin: 0;
     margin-bottom: 13px;
+
+    a {
+      display: block;
+      height: 147px;
+    }
   }
 
   .nav {
@@ -364,6 +369,8 @@ a:active {
     margin: 0;
     padding: 0;
     float: left;
+
+    a { display: block; height: 77px; }
   }
 
   .about-us, address, strong {
