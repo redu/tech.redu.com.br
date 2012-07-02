@@ -1,0 +1,38 @@
+<% content_for :content do %>
+  <div class="container">
+    <div class="call-to-army">
+      <div class="image-wrapper">
+        <%= tag :img, :src => "/img/call-to-army-api.png" %>
+      </div>
+      <h3>Sobre a oferta</h3>
+      <p>
+        O Redu está contratando pessoas interessadas em trabalhar na integração de Recursos Eeducacionais abertos a nossa plataforma.
+      </p>
+
+      <p>
+        Recursos educacionais abertos são materiais de ensino que estão sob domínio público, ou estão licenciados de maneira aberta, permitindo que sejam utilizados ou adaptados por terceiros. Mais informações podem ser encontradas em: <%= link_to "http://livrorea.net.br/", "http://livrorea.net.br/" %>
+    </p>
+
+    <h4> Os pré-requisitos desejáveis são: </h4>
+
+    <ul>
+      <li> Uso de APIs REST (realizar requisições para a nossa API) </li>
+      <li> OAuth (autenticação) </li>
+      <li> 1 ou mais linguagens de programação </li>
+      <li> Deploy de aplicações no http://heroku.com </li>
+      <li> Os recursos educacionais são implementados em várias linguagens (a maioria deles em Java [applets] ou HTML5 + JavaScript). Por isso é importante que a pessoa esteja disposta a lidar/aprender várias linguagens.  </li>
+    </ul>
+
+    <h4> Algumas referências sobre a empresa podem ser encontradas em: </h4>
+
+    <ul>
+      <li> <%= link_to "http://www.facebook.com/redutech", "http://www.facebook.com/redutech" %> </li>
+      <li> <%= link_to "http://tech.redu.com.br", "http://tech.redu.com.br" %> </li>
+      <li> <%= link_to "http://www.facebook.com/redesocialeducacional", "http://www.facebook.com/redesocialeducacional" %> </li>
+      <li> <%= link_to "http://blog.redu.com.br", "http://blog.redu.com.br" %> </li>
+    </ul>
+
+    <p> Para quem quiser saber mais, manda um e-mail para <%= link_to "jobs@redu.com.br", "mailto:jobs@redu.com.br" %> até amanhã (03/07) a noite.  </p>
+  </div>
+</div>
+<% end %>

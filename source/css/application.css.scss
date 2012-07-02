@@ -84,6 +84,25 @@ a:active {
   margin: 0 auto;
 
   background: url("../img/redutech-graph.png") no-repeat -40px 200px;
+
+  .call-to-army {
+    width: 700px;
+    margin: 0 auto;
+
+    .image-wrapper {
+
+      padding: 20px;
+      text-align: center;
+
+      img {
+        .borderradius & { @include border-radius(11px); }
+        .boxshadow & {
+          @include single-box-shadow($gray4, 1px, 0, 2px, 2px);
+        }
+      }
+    }
+  }
+
 }
 
 .header {
@@ -195,7 +214,7 @@ a:active {
   }
 }
 
-.main {
+.main, .call-to-army {
   clear: both;
 
   h3 {
@@ -208,7 +227,7 @@ a:active {
     font-weight: 100;
   }
 
-  p {
+  p, li {
     font-size: 14px;
     font-family: "museo-sans",sans-serif;
     font-style: normal;
