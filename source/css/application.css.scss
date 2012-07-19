@@ -50,12 +50,10 @@ body {
   background: $gray1;
   text-align: center;
   font-family: heveltica, arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 18px;
 
-  .textshadow & {
-    @include single-text-shadow($white, 0, 1px, 1px);
-  }
+  .textshadow & { @include single-text-shadow($white, 0, 1px, 0); }
 }
 
 a, a:visited {
@@ -68,9 +66,7 @@ a:hover {
   text-decoration: underline;
 }
 
-a:active {
-  color: $blue2;
-}
+a:active { color: $blue2; }
 
 ::selection {
   background: $blue3;
@@ -90,19 +86,12 @@ a:active {
     margin: 0 auto;
 
     .image-wrapper {
-
       padding: 20px;
       text-align: center;
 
-      img {
-        .borderradius & { @include border-radius(11px); }
-        .boxshadow & {
-          @include single-box-shadow($gray4, 1px, 0, 2px, 2px);
-        }
-      }
+      img { .borderradius & { @include border-radius(11px); } }
     }
   }
-
 }
 
 .header {
@@ -124,6 +113,35 @@ a:active {
   }
 
   .nav {
+    font-family: "museo-sans",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    width: 395px;
+    float: right;
+    line-height: 14px;
+    margin-top: 75px;
+
+    li {
+      padding: 0 10px;
+      float: left;
+      border-right: 1px solid $gray4;
+    }
+
+    li:first-child { padding-left: 0; }
+    li:last-child { padding-right: 0; border: none; }
+  }
+}
+
+.call-wrapper {
+  text-align: left;
+  clear: both;
+  height: 300px;
+  width: 1240px;
+  margin: 0 auto;
+  background-color: $green3;
+
+  .product-links {
 
     font-family: "museo-sans",sans-serif;
     font-style: normal;
@@ -143,16 +161,6 @@ a:active {
     li:first-child { padding-left: 0; }
     li:last-child { padding-right: 0; border: none; }
   }
-
-}
-
-.call-wrapper {
-  text-align: left;
-  clear: both;
-  height: 300px;
-  width: 1240px;
-  margin: 0 auto;
-  background-color: $green3;
 
   .hack {
     background: url("../img/call-green-bkg.png") no-repeat 0 ;
@@ -178,9 +186,7 @@ a:active {
   }
 
   .header-call {
-    .textshadow & {
-      @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px);
-    }
+    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px); }
 
     padding: 0;
     margin: 0;
@@ -196,12 +202,9 @@ a:active {
   }
 
   p {
-    .textshadow & {
-      @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px);
-    }
-
     margin: 0;
     padding: 0;
+    padding-top: 20px;
     clear: both;
     width: 700px;
     color: white;
@@ -211,11 +214,27 @@ a:active {
     font-weight: 500;
     line-height: 20px;
     float: left;
+    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, 1px, 1px); }
   }
 }
 
 .main, .call-to-army {
   clear: both;
+
+  .product-links {
+    float: none;
+    margin-top: 20px;
+    list-style: none;
+
+    li {
+      padding: 0 10px;
+      float: left;
+      border-right: 1px solid $gray4;
+    }
+
+    li:first-child { padding-left: 0; }
+    li:last-child { padding-right: 0; border: none; }
+  }
 
   h3 {
     margin-top: 40px;
@@ -238,11 +257,8 @@ a:active {
   }
 
   img {
-    .borderradius & { @include border-radius; }
-    .boxshadow & {
-      @include single-box-shadow($gray4, 1px, 0, 2px, 2px);
-    }
     border: 1px solid white;
+    .borderradius & { @include border-radius; }
   }
 
   section {
@@ -250,32 +266,45 @@ a:active {
     clear: both;
     padding: 5px 0;
     padding-left: 130px;
-    width: 760px;
+    width: 700px;
+
+    &#mission, &#team, &#contact-us, &#product {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &#product  {
+      background: $gray1; //Guila, misteriosamente a bola feita de circulos menores estava aparecendo no espaço em que há padding. Eis o motivo de definir o background.
+      .link-logo {
+        float: left;
+        padding-bottom: 2px;
+      }
+    }
   }
 
-  .explain-mission {
-    clear: both;
-  }
+  .explain-mission { clear: both; }
 
   blockquote {
+    line-height: 20px;
+
     &:before, &:after {
       content: " ";
       width: 30px;
       height: 25px;
       display: block;
+      position: absolute;
     }
 
     &:before {
       margin-left: -30px;
-      margin-top: -2px;
+      margin-top: 5px;
       float: left;
       background: url("../img/quote-1.png") no-repeat;
     }
 
     &:after {
-      margin-right: -40px;
-      margin-top: -40px;
-      float: right;
+      margin-left: 705px;
+      margin-top: -42px;
       background: url("../img/quote-2.png") no-repeat;
     }
 
@@ -286,53 +315,67 @@ a:active {
   }
 
   address {
+    color: $gray6;
     font-family: "museo-sans",sans-serif;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 500;
     font-size: 14px;
     width: 340px;
     height: 70px;
     float: left;
-    margin-right: 25px;
   }
+
+  address + address { margin-left: 20px; } //Apenas inserir margem na esquerda do segundo elemento para que caiba na largura definida pelo designer
 
   .product-img {
     float: left;
     margin-right: 20px;
-  }
-
-  .product-links {
-    @include clearfix;
-
-    list-style: none;
-    line-height: 14px;
-    margin: 0;
-    padding: 0;
-    margin-top: 25px;
-
-
-    li {
-      padding: 0 10px;
-      float: left;
-      border-right: 1px solid $gray4;
+    .boxshadow & {
+      @include single-box-shadow($gray4, 0, 1px, 3px, 1px);
     }
-
-    li:first-child { padding-left: 0; }
-    li:last-child { padding-right: 0; border: none; }
+    &:hover {
+      border-color: $blue2;
+      .boxshadow & {
+        @include single-box-shadow($blue4, 0, 1px, 3px, 1px);
+      }
+    }
   }
 
   .team {
     list-style: none;
-    margin: 0 10px 0 10px;
     padding: 0;
+    margin: 0px;
+    float:left;
 
     li {
-      margin: 10px 20px 10px 0;
+      width: 159px;
+      margin: 20px 10px 0 10px;
+      padding-bottom: 0;
+      display: inline-block;
       float: left;
       color: $gray6;
       font-family: "museo-sans",sans-serif;
       font-style: normal;
+
+      &:nth-child(4n) { margin-right: 0; }
+
+      &.member-left { //member-left foi uma classe criada para remover margem à esquerda dos primeiros elementos de cada linha, para que caiba na largura definida pelo designer
+        clear: left;
+        margin-left: 0;
+      }
+      img {
+        .boxshadow & {
+          @include single-box-shadow($gray4, 0, 1px, 2px, 2px);
+        }
+        &:hover {
+          border-color: $blue2;
+          .boxshadow & {
+            @include single-box-shadow(rgba(21,138,196,0.5), 0, 1px, 2px, 2px);
+          }
+        }
+      }
     }
+
 
     h5 {
       font-size:18px;
@@ -347,9 +390,7 @@ a:active {
       }
     }
 
-    a {
-      font-weight: 500;
-    }
+    a { font-weight: 500; }
 
     a:hover, a:hover * {
       font-weight: 500;
@@ -358,18 +399,25 @@ a:active {
     }
 
     strong {
-      font-weight: 100;
+      font-weight: 300;
+      font-size: 12px;
     }
   }
 
   .office {
-    margin-right: 15px;
-    margin-bottom: 20px
+    float: left;
+    margin-bottom: 20px;
+    width: 338px;
   }
 
+  .office  + .office { margin-left: 18px; } // Apenas inserir margem na esquerda da segunda foto para que caiba na largura definida pelo designer
+
+  .office-big { width: 696px; }
 }
 
 .footer {
+  font-size: 11px;
+  line-height: 15px;
   @include clearfix;
   text-align: left;
   padding-bottom: 70px;
@@ -377,11 +425,8 @@ a:active {
   margin: 0 auto;
   margin-top: 60px;
   border-top: 1px solid white;
-  background: $gray5;
-
-  .cssgradients & {
-    @include background-image(linear-gradient($gray5, $gray1));
-  }
+  background: $gray3;
+  padding-top: 40px;
 
   .footer-content {
     margin: 0 auto;
@@ -401,13 +446,7 @@ a:active {
     a { display: block; height: 77px; }
   }
 
-  .about-us, address, strong {
-    .textshadow & {
-      @include single-text-shadow($white, 0, 1px, 1px);
-    }
-    font-size: 11px;
-    color: $gray6;
-  }
+  .about-us, address, strong { color: $gray6; }
 
   .about-us {
     width: 290px;
@@ -442,8 +481,14 @@ a:active {
       margin: 0;
       margin-left: 10px;
       padding: 0;
+      font-weight: 500;
     }
   }
 
   .redu-tech-nav { width: 140px; }
+}
+
+.link-hover { // CSS criado para aplicar regras no nome do membro da equipe quando houver hover na foto do mesmo.
+  color: $blue4 !important;
+  font-weight: 500 !important;
 }
