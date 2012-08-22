@@ -131,4 +131,5 @@ DEPENDENCIES
   heroku
   middleman (~> 3)
   rack-contrib
+  rb-inotify
   thin
