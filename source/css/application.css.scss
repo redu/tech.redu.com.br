@@ -189,7 +189,7 @@ a:active { color: $blue2; }
   }
 
   .header-call {
-    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 1px); }
+    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 0); }
 
     padding: 0;
     margin: 0;
@@ -217,7 +217,7 @@ a:active { color: $blue2; }
     font-weight: 500;
     line-height: 20px;
     float: left;
-    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, 1px, 1px); }
+    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 0); }
   }
 }
 
