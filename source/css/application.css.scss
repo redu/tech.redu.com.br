@@ -188,20 +188,33 @@ a:active { color: $blue2; }
     padding-left: 126px;
   }
 
-  .header-call {
-    .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 0); }
-
-    padding: 0;
-    margin: 0;
+  .header-call-box {
     margin-top: 52px;
-    margin-bottom: 20px;
-    width: 580px;
-    line-height: 48px;
-    font-size: 48px;
-    font-family: "museo-sans",sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    color: $white;
+    width: 700px;
+
+    .header-call {
+      .textshadow & { @include single-text-shadow(rgb(97,160,128), 0, -1px, 0); }
+
+      padding: 0;
+      margin: 0;
+      width: 580px;
+      line-height: 48px;
+      font-size: 48px;
+      float: left;
+      font-family: "museo-sans",sans-serif;
+      font-style: normal;
+      font-weight: 100;
+      color: $white;
+    }
+
+    .button-like-facebook {
+      border:none;
+      overflow:hidden;
+      width:65px;
+      height:90px;
+      float: right;
+      margin-top: 14px;
+    }
   }
 
   p {
